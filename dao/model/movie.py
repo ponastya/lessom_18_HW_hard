@@ -1,8 +1,8 @@
 from marshmallow import Schema, fields
 
 from setup_db import db
-from dao.model.directors import DirectorSchema
-from dao.model.genres import GenreSchema
+from dao.model.director import DirectorSchema
+from dao.model.genre import GenreSchema
 
 class Movie(db.Model):
     __tablename__ = 'movie'
