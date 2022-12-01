@@ -10,7 +10,6 @@ class DirectorDAO:
     def get_one(self, uid):
         return self.session.query(Director).get(uid)
 
-
     def create(self, director_id):
         ent = Director(**director_id)
         self.session.add(ent)
@@ -24,7 +23,6 @@ class DirectorDAO:
 
         self.session.add(director)
         self.session.commit()
-
 
     def delete(self, uid):
         director = self.get_one(uid)

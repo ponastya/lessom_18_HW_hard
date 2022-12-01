@@ -10,10 +10,10 @@ class MovieDAO:
     def get_one(self, uid):
         return self.session.query(Movie).get(uid)
 
-    def  get_by_director_id(self, value):
+    def get_by_director_id(self, value):
         return self.session.query(Movie).filter(Movie.director_id==value).all()
 
-    def get_by_genre(self, value):
+    def get_by_genre_id(self, value):
         return self.session.query(Movie).filter(Movie.genre_id == value).all()
 
     def get_by_year(self, value):
