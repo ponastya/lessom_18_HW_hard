@@ -5,7 +5,7 @@ class MovieDAO:
         self.session = session
 
     def get_all_movies(self):
-        return self.session.query(Movie).get(all)
+        return self.session.query(Movie).all()
 
     def get_one(self, uid):
         return self.session.query(Movie).get(uid)

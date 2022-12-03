@@ -5,7 +5,7 @@ class DirectorDAO:
         self.session = session
 
     def get_all_directors(self):
-        return self.session.query(Director).get(all)
+        return self.session.query(Director).all()
 
     def get_one(self, uid):
         return self.session.query(Director).get(uid)
