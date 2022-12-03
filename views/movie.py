@@ -30,7 +30,7 @@ class MoviesViews(Resource):
         return "", 201, {"location": f"/movies/{movie.id}"}
 
 
-@movie_ns.route("/<int: uid>")
+@movie_ns.route("/<int:uid>")
 class MovieView(Resource):
     def get(self, uid):
         m_object = movie_service.get_one(uid)

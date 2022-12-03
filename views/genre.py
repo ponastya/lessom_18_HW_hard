@@ -12,7 +12,7 @@ class GenresView(Resource):
         result = GenreSchema(many=True).dump(genre)
         return result, 200
 
-@genre_ns.route("/<int: uid>")
+@genre_ns.route("/<int:uid>")
 class GenreView(Resource):
     def get_one(self, uid):
         g_object = genre_service.get_one(uid)
